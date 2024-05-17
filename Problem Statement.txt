@@ -1,0 +1,75 @@
+Note - This information is also in the same document as the JS code.
+
+
+Problem Statement:
+
+Birthstone Jewelry Design:
+
+a. User selects either a necklace or ring to design.
+
+b. Then the user enters the birthday month for each child or for whomever you
+would like to add to your design.
+
+i. After the first month is entered, the system will continue to prompt asking
+if there are additional stones to add.
+
+ii. If the jewelry design is a ring, then there is a maximum of 6 stones that
+can be added to each ring before a second ring would be required.
+
+c. The month entered will equate to a stone that will be added to the necklace or
+ring (ring has max of 6 stones).
+
+d. Then a total will be calculated, and a description of the jewelry being purchased
+will be displayed at the end.
+
+
+
+Nouns: Necklace, ring, ring = max of 6 stones, birthday month (12 months), order description, total
+
+
+Verbs: Prompt, prompt again for more, substitue month for birthstone, calculate sum of order, display total and descriptions
+
+
+
+INPUTS: 
+ring
+necklace
+month
+done
+
+
+
+PROCESSING:
+change count of months to price
+stone price = calculate number of months * 25
+add stone price to jewelry price
+
+
+
+OUTPUTS:
+display count of months entered
+display total of price
+display months entered
+display thank you
+
+
+
+3. Solution Algorithm
+Create a solution algorithm based on the defining diagram.
+
+SOLUTION ALGORITHM
+input 
+loop
+birthday month
+month (to calculate count)
+total
+
+while prompt for birthday month has a value = true
+when user enters "done" = false
+display count of months entered
+display total of price of stones and jewelery together
+display months entered
+display thank you
+
+
+

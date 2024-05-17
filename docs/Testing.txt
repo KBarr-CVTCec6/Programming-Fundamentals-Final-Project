@@ -1,0 +1,23 @@
+Apr 29 at 10:41am
+Well, done. You might need to take the date and substring out the month to compare the month number to the number in the IF/ELSE statement. If you need a loop, just encapsulate the entire code with a WHILE statement that asks if you would like to calculate another birthstone or restaurant calculation. That is an easy way to add a repeating loop to your program.
+
+//Variables
+var jewelery;
+var month;
+var stone;
+
+
+//Assignment from prompts
+jewelery = prompt("Enter 1 to build a necklace or 2 to build a ring")
+month = prompt("Enter a birthday month to add to your oder. Or enter done to finish.");
+
+//Calculation
+switch(month) {
+
+
+
+
+
+
+}
+

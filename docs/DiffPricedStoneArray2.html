@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My Final</title>
+  </head>
+  
+  <main>
+  
+  <pre>Student name: Kristi Stockburger
+  
+  
+  </pre>
+  
+<pre class="pseudocode">PROBLEM STATEMENT:
+a. User selects either a necklace or ring to design. (Did not get this part to work.)
+
+b. Then the user enters the birthday month or whomever they would like to add to the design.
+
+  i. After the first month is entered, the system will continue to prompt asking
+  if there are additional stones to add.
+
+  ii. If the jewelry design is a ring, then there is a maximum of 6 stones that
+  can be added to each ring before a second ring would be required.
+
+  c. The month entered will equate to a stone that will be added to the necklace or
+  ring (ring has max of 6 stones).
+
+  d. Then a total will be calculated, and a description of the jewelry being purchased
+  will be displayed at the end.
+
+
+
+Nouns: Necklace, ring, ring = max of 6 stones, birthday month (12 months), order description, total
+
+Verbs: Prompt, prompt again for more, substitue month for birthstone, calculate sum of order, display total and descriptions
+
+
+</pre>
+
+        <h3>2. Defining Diagram</h3>
+        <p>Convert the nouns and verbs into variable names and processes and create a defining diagram. Follow the course naming standards for inputs and outputs.</p>
+
+
+<pre class="pseudocode">
+INPUTS: 
+ring
+necklace
+month
+done
+
+
+
+PROCESSING:
+change count of months to price
+stone price = calculate number of months * 25
+add stone price to jewelry price
+
+
+
+OUTPUTS:
+display count of months entered
+display total of price
+display months entered
+display thank you
+
+
+
+</pre>
+
+        <h3>3. Solution Algorithm</h3>
+        <p>Create a solution algorithm based on the defining diagram.</p>
+
+
+<pre class="pseudocode">
+SOLUTION ALGORITHM
+input 
+loop
+birthday month
+month (to calculate count)
+total
+
+while prompt for birthday month has a value = true
+when user enters "done" = false
+display count of months entered
+display total of price of stones and jewelery together
+display months entered
+display thank you
+
+
+
+ 
+
+</pre>
+
+
+
+<pre class="pseudocode">
+VARIABLES:
+
+TEST CASE 1:
+
+  INPUT VALUES:July, September, June, done
+
+  EXPECTED RESULT:Order Summary - You entered 3 birthday stones.
+                  Your total purchase price is $175.
+                  Here are the months in your order:
+                  July
+                  September
+                  June
+                  Thank you for your order!
+                  
+                 
+
+  ACTUAL RESULT:
+    Order Summary - You entered 3 birthday stones.
+Your total purchase price is $175.
+Here are the months in your order: 
+July
+September
+June
+Thank you for your order!
+
+TEST CASE 2: 
+
+  INPUT VALUES: August, April, May, no, done
+
+  EXPECTED RESULT:Order Summary - You entered 3 birthday stones.
+                  Your total purchase price is $200.
+                  Here are the months in your order:
+                  August
+                  April
+                  May
+                  no
+                  Thank you for your order!
+
+  ACTUAL RESULT:
+    Order Summary - You entered 4 birthday stones.
+Your total purchase price is $200.
+Here are the months in your order: 
+August
+April
+May
+no
+Thank you for your order!
+  
+
+TEST CASE 3: June, march, September, done
+
+  INPUT VALUES: June, march, Sepjkj;jk;j, done
+
+  EXPECTED RESULT:Order Summary - You entered 3 birthday stones.
+                  Your total purchase price is $175.
+                  Here are the months in your order:
+                  June
+                  march
+                  Sepjkj;jk;j
+                  done
+                  Thank you for your order!
+
+  ACTUAL RESULT:
+  Order Summary - You entered 3 birthday stones.
+Your total purchase price is $175.
+Here are the months in your order: 
+June
+march
+Sepjkj;jk;j 
+
+
+
+
+
+
+
+
+</pre>
+
+<pre>
+<h3>Final Code: Birthday Gemstone Jewelery Design</h3>
+</pre>
+
+
+
+<pre>
+  <script>
+// Declare variables
+function JeweleryDesign(){
+  const month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const price = [25, 30, 20, 80, 75, 60, 70, 40, 70, 60, 50, 30];
+  const stone = ["Garnet", "Amethyst", "Aquamarine", "Diamond", "Emerald", "Pearl", "Ruby", "Peridot", "Sapphire", "Opal", "Topaz", "Turquois"]
+  var monthBirth;
+  var convertStone;
+  let selectedMonths = [];
+  let totalStonePrice = 0;
+  let totalPurchase = 0;
+  let necklace = 100;
+  
+    
+  document.write("Order Summary: " + "\n");
+  
+  
+  while (true) {
+    monthBirth = prompt("Enter a month to add a birthday gemstone. Please type full word and capitalize to avoid errors. You can enter \"done\" when finished.");
+    if(monthBirth === "done") {
+      break;
+    }
+   
+    const monthIndex = month.indexOf(monthBirth);
+    if(monthIndex !== -1) {
+    selectedMonths.push(monthBirth);
+    
+    
+
+    document.write(month[monthIndex] + " was added to the order." + "\n");
+    } else {
+    document.write("You had an invalid entry. Please try again." + "\n");
+    }
+
+    
+   } 
+   
+   
+   document.write("You entered " + selectedMonths.length + " birthday stone months." + "\n");
+   document.write("\n");
+   document.write("Price for each gemstone: " + "\n");
+   for(index = 0; index < selectedMonths.length; index++) {
+    document.write(stone[index] + " is $" + price[index] + "\n");
+    totalStonePrice += price[index];
+   }
+   
+   totalPurchase = (necklace + totalStonePrice);
+   
+   document.write("Total price for gemstone(s): $" + totalStonePrice + "\n");
+   document.write("Total order price is: $" + totalPurchase + "\n");
+   document.write("\n");
+   document.write("Thank you for your order!");
+}
+
+JeweleryDesign(); 
+
+</script>
+</pre>
+
+  </main>
+
+
+</html>

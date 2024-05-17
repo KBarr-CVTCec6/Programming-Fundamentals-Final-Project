@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My Final</title>
+  </head>
+  
+  <main>
+  
+  <pre>Student name: Kristi Stockburger
+  
+  
+  </pre>
+  
+<pre class="pseudocode">PROBLEM STATEMENT:
+a. User selects either a necklace or ring to design.
+
+b. Then the user enters the birthday month or whomever they would like to add to the design.
+
+  i. After the first month is entered, the system will continue to prompt asking
+  if there are additional stones to add.
+
+  ii. If the jewelry design is a ring, then there is a maximum of 6 stones that
+  can be added to each ring before a second ring would be required.
+
+  c. The month entered will equate to a stone that will be added to the necklace or
+  ring (ring has max of 6 stones).
+
+  d. Then a total will be calculated, and a description of the jewelry being purchased
+  will be displayed at the end.
+
+
+
+Nouns: Necklace, ring, ring = max of 6 stones, birthday month (12 months), order description, total
+
+Verbs: Prompt, prompt again for more, substitue month for birthstone, calculate sum of order, display total and descriptions
+
+
+</pre>
+
+        <h3>2. Defining Diagram</h3>
+        <p>Convert the nouns and verbs into variable names and processes and create a defining diagram. Follow the course naming standards for inputs and outputs.</p>
+
+
+<pre class="pseudocode">
+INPUTS: 
+ring
+necklace
+month
+done
+
+
+
+PROCESSING:
+change count of months to price
+stone price = calculate number of months * 25
+add stone price to jewelry price
+
+
+
+OUTPUTS:
+display count of months entered
+display total of price
+display months entered
+display thank you
+
+
+
+</pre>
+
+        <h3>3. Solution Algorithm</h3>
+        <p>Create a solution algorithm based on the defining diagram.</p>
+
+
+<pre class="pseudocode">
+SOLUTION ALGORITHM
+input 
+loop
+birthday month
+month (to calculate count)
+total
+
+while prompt for birthday month has a value = true
+when user enters "done" = false
+display count of months entered
+display total of price of stones and jewelery together
+display months entered
+display thank you
+
+
+
+ 
+
+</pre>
+
+
+
+<pre class="pseudocode">
+VARIABLES:
+
+TEST CASE 1:
+
+  INPUT VALUES:July, September, June, done
+
+  EXPECTED RESULT:Order Summary - You entered 3 birthday stones.
+                  Your total purchase price is $175.
+                  Here are the months in your order:
+                  July
+                  September
+                  June
+                  Thank you for your order!
+                  
+                 
+
+  ACTUAL RESULT:
+    Order Summary - You entered 3 birthday stones.
+Your total purchase price is $175.
+Here are the months in your order: 
+July
+September
+June
+Thank you for your order!
+
+TEST CASE 2: 
+
+  INPUT VALUES: August, April, May, no, done
+
+  EXPECTED RESULT:Order Summary - You entered 3 birthday stones.
+                  Your total purchase price is $200.
+                  Here are the months in your order:
+                  August
+                  April
+                  May
+                  no
+                  Thank you for your order!
+
+  ACTUAL RESULT:
+    Order Summary - You entered 4 birthday stones.
+Your total purchase price is $200.
+Here are the months in your order: 
+August
+April
+May
+no
+Thank you for your order!
+  
+
+TEST CASE 3: June, march, September, done
+
+  INPUT VALUES: June, march, Sepjkj;jk;j, done
+
+  EXPECTED RESULT:Order Summary - You entered 3 birthday stones.
+                  Your total purchase price is $175.
+                  Here are the months in your order:
+                  June
+                  march
+                  Sepjkj;jk;j
+                  done
+                  Thank you for your order!
+
+  ACTUAL RESULT:
+  Order Summary - You entered 3 birthday stones.
+Your total purchase price is $175.
+Here are the months in your order: 
+June
+march
+Sepjkj;jk;j 
+
+
+
+
+
+
+
+
+</pre>
+
+<pre>
+Final Code: Birthday Jewelery Design
+</pre>
+
+
+
+<pre>
+  <script>
+// Declare variables
+function JeweleryDesign(){
+  var input;
+  var necklace = 100;
+  var keepLooping = true;
+  var monthBirth;
+  var month = [];
+  var price = [25, 30, 20, 80, 75, 60, 70, 40, 70, 60, 50, 30];
+  var totalCount = 0;
+  var totalStonePrice = 0;
+  var totalPurchase = 0;
+  
+
+    
+    document.write("Order Summary: " + "\n");
+  
+  
+  while (keepLooping) {
+    monthBirth = prompt("Enter a month or enter done when finished.");
+    if(monthBirth === "done") {
+      keepLooping = false; 
+    }else{
+    month.push(monthBirth);
+       if (monthBirth === "January") {
+        document.write("January is Garnet" + "\n");
+        } else if (monthBirth === "February") {
+        document.write("February is Amethyst" + "\n");
+        } else if (monthBirth === "March") {
+        document.write("March is Aquamarine" + "\n");
+        } else if (monthBirth === "April") {
+        document.write("April is Diamond" + "\n");
+        } else if (monthBirth === "May") {
+        document.write("May is Emerald" + "\n");
+        } else if (monthBirth === "June") {
+        document.write("June is Pearl" + "\n");
+        } else if (monthBirth === "July") {
+        document.write("July is Ruby" + "\n");
+        } else if (monthBirth === "August") {
+        document.write("August is Peridot" + "\n");
+        } else if (monthBirth === "September") {
+        document.write("September is Sapphire" + "\n");
+        } else if (monthBirth === "October") {
+        document.write("October is Opal" + "\n");
+        } else if (monthBirth === "November") {
+        document.write("November is Topaz" + "\n");
+        } else if (monthBirth === "December") {
+        document.write("December is Turquois" + "\n");
+        } else {
+         document.write("You had an ivalid entry. Please try again." + "\n");
+        
+      }
+
+    }
+   }
+    
+    totalCount = Number(month.length);
+    //totalStonePrice = totalCount * 25;
+    necklace = Number(necklace);
+    totalPurchase = necklace + totalStonePrice;
+    
+    
+    document.write("You entered " + month.length + " birthday stones." + "\n");
+    document.write("\n");
+    
+    document.write("Here are the prices of the stone(s): " + "\n");
+    for(input = 0; input < month.length; input++) {
+      
+        if (month[input] === "January") {
+        document.write("Garnet is $" + price[0] + "\n");
+        } else if (month[input] === "February") {
+        document.write("Amethyst" + price[1] + "\n");
+        } else if (month[input] === "March") {
+        document.write("Aquamarine is $" + price[2] + "\n");
+        } else if (month[input] === "April") {
+        document.write("Diamond is $" + price[3] + "\n");
+        } else if (month[input] === "May") {
+        document.write("Emerald is $" + price[4] + "\n");
+        } else if (month[input] === "June") {
+        document.write("Pearl is $" + price[5] + "\n");
+        } else if (month[input] === "July") {
+        document.write("Ruby is $" + price[6] + "\n");
+        } else if (month[input] === "August") {
+        document.write("Peridot is $" + price[7] + "\n");
+        } else if (month[input] === "September") {
+        document.write("Sapphire is $" + price[8] + "\n");
+        } else if (month[input] === "October") {
+        document.write("Opal is $" + price[9] + "\n");
+        } else if (month[input] === "November") {
+        document.write("Topaz is $" + price[10] + "\n");
+        } else if (month[input] === "December") {
+        document.write("Turquois is $" + price[11] + "\n");
+        } else {
+         document.write("You had an ivalid entry. Please try again." + "\n");
+         
+         //price = Number(price[]);
+         //totalStonePrice = sum(price[]);
+         
+         
+         document.write("Your total purchase price is " +"$" + totalPurchase + "." + "\n");
+         document.write("Your total price is " + totalStonePrice);
+    }
+  }
+
+    document.write("Thank you for your order!");
+}
+
+JeweleryDesign();
+
+</script>
+</pre>
+
+  </main>
+
+
+</html>

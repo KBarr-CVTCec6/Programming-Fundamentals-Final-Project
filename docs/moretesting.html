@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <title>My Final</title>
+  </head>
+  
+  <main>
+<pre class="pseudocode">PROBLEM STATEMENT:
+a. User selects either a necklace or ring to design.
+
+b. Then the user enters the birthday month for each child or for whomever you
+would like to add to your design.
+
+  i. After the first month is entered, the system will continue to prompt asking
+  if there are additional stones to add.
+
+  ii. If the jewelry design is a ring, then there is a maximum of 6 stones that
+  can be added to each ring before a second ring would be required.
+
+  c. The month entered will equate to a stone that will be added to the necklace or
+  ring (ring has max of 6 stones).
+
+  d. Then a total will be calculated, and a description of the jewelry being purchased
+  will be displayed at the end.
+
+
+
+Nouns: Necklace, ring, ring = max of 6 stones, birthday month (12 months), order description, total
+
+Verbs: Prompt, prompt again for more, substitue month for birthstone, calculate sum of order, display total and descriptions
+
+
+</pre>
+
+        <h3>2. Defining Diagram</h3>
+        <p>Convert the nouns and verbs into variable names and processes and create a defining diagram. Follow the course naming standards for inputs and outputs.</p>
+
+
+<pre class="pseudocode">
+INPUTS: 
+jewelery
+month
+done
+
+
+
+PROCESSING:
+change jewelery type 1 to necklace and 2 to ring
+change month to stone
+calculate price for necklace or ring
+calculate price for stone
+total price
+
+
+OUTPUTS:
+display jewery type
+display list of stones
+
+
+
+</pre>
+
+        <h3>3. Solution Algorithm</h3>
+        <p>Create a solution algorithm based on the defining diagram.</p>
+
+
+<pre class="pseudocode">
+SOLUTION ALGORITHM
+ 
+
+</pre>
+
+
+
+<pre class="pseudocode">
+VARIABLES:
+
+TEST CASE 1:
+
+  INPUT VALUES:
+
+  EXPECTED RESULT:
+
+  ACTUAL RESULT:
+
+TEST CASE 2:
+
+  INPUT VALUES: 
+
+  EXPECTED RESULT:
+
+  ACTUAL RESULT:
+
+TEST CASE 3:
+
+  INPUT VALUES:
+
+  EXPECTED RESULT:
+
+  ACTUAL RESULT:
+  
+</pre>
+
+<pre>
+  <script>
+// Declare variables
+function JeweleryDesign(){
+  var input;
+  var keepLooping = true;
+  var userName = [];
+  var count = 0;
+  
+  
+  while (keepLooping) {
+    input = prompt("Enter a userName or done when finished.");
+    if(input === "done") {
+      keepLooping = false; 
+    }else{
+    userName.push(input);
+    
+    document.write("Username is: " + userName + "yahoo.com");
+    }
+  }
+}
+
+JeweleryDesign();
+  
+</script>
+</pre>
+
+  </main>
+
+
+</html>
