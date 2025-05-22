@@ -1,0 +1,64 @@
+Birthstone Jewelry Builder
+
+My hope was for the birthstone jewelry builder to have the options to select the month (for a birthstone), type of metal, and type of jewelry with the output being added to the SQLite database. I also wanted to show a ship date that would be 10 days after the entered build date. For the ship date, I adjusted the date code from our last assignment to calculate the days until ship in this project. I researched how to do calculate 10 days from a specified date and found I would need to import timedelta (part of the datetime module https://docs.python.org/3/library/datetime.html ). I created a user interface (ui.py), database code file (db.py), and a business code (objects.py) file. 
+
+To start, I tried to build output to an Excel file, then attempted to switch the code over to the SQLite database. I was going to add pricing as well as the ship date to the database if I could get the basic code to work (just add stone, metal, and jewelry type); however, once I tried to switch over to the SQLite database code, I ran into issues I could not get past. There was an error message regarding “not being able to find the column “jewelry”. I tried to figure this out but was not able to. The database was built successfully in SQLite, and I was able to add columns. 
+
+
+
+
+Birthstone Jewelry Builder
+
+UI
+Import db
+from objects import Stone, Metal, Jewelry
+import stone
+
+From datetime import date, datetime 
+From decimal import Decimal, ROUND_HALF_UP
+
+MONTHS = "JANUARY-GARNET", "FEBRUARY-AMETHYST", "MARCH-AQUAMARINE", "APRIL-DIAMOND", "MAY-EMERALD", "JUNE-PEARL", "JULY-RUBY", "AUGUST-PERIDOT", "SEPTEMBER-SAPPHIRE", "OCTOBER-OPAL", "NOVEMBER-TOPAZ", "DECEMBER-TURQUOISE"
+
+METALS = "GOLD", "SILVER", "PLATINUM"
+
+JEWELERY = "BRACELET", "NECKLACE", "RING"
+
+Display title = Build Your Birthstone Jewelry 
+Display menu = 
+Command menu
+
+
+Enter stone options
+Enter metal options
+Enter jewelry options
+Build Jewelry
+Show menu
+Exit
+
+Def get_buildJewelry 
+	Stone = get stone
+	Metal = get metal
+	Jewelry = get jewelry
+build = stone + metal + jewelry
+build.add(build)
+db.add_bulld (build) 
+
+
+
+Objects
+Class stone
+
+Class metal
+
+Class jewelry 
+
+Def main()
+Build = Build()
+build.add(build(     ))
+
+
+
+
+
+
+
